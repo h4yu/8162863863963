@@ -1,3 +1,8 @@
+for _, v in ipairs(game.CoreGui:GetChildren()) do
+    if v.Name == "ScreenGui" or v.Name == "" then
+        v:Destroy()
+    end
+end
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -15,7 +20,6 @@ ImageButton.Draggable = true
 ImageButton.Image = "http://www.roblox.com/asset/?id=18318099219"
 ImageButton.MouseButton1Down:connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.LeftControl,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.LeftControl,true,game)
 end)
 UICorner.Parent = ImageButton
 
