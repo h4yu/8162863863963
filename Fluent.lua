@@ -5334,7 +5334,7 @@ end,
         local aa, ab, ac, ad, ae = b(54)
         return {
             Name = "Milk",
-            Accent = Color3.fromRGB(180, 55, 90),
+            Accent = Color3.fromRGB(118,86,64),
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(130, 90, 110),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(190, 60, 135), Color3.fromRGB(165, 50, 70)),
