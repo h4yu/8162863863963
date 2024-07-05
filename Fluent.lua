@@ -5346,7 +5346,7 @@ end,
             InElementBorder = Color3.fromRGB(118,86,64),
             ElementTransparency = 0.86,
             ToggleSlider = Color3.fromRGB(118,86,64),
-            ToggleToggled = Color3.fromRGB(118,86,64),
+            ToggleToggled = Color3.fromRGB(204,174,136),
             SliderRail = Color3.fromRGB(166,123,91),
             DropdownFrame = Color3.fromRGB(177,143,106),
             DropdownHolder = Color3.fromRGB(204,174,136),
@@ -5366,7 +5366,7 @@ end,
             DialogInputLine = Color3.fromRGB(190, 160, 180),
             Text = Color3.fromRGB(240, 240, 240),
             SubText = Color3.fromRGB(170, 170, 170),
-            Hover = Color3.fromRGB(200, 120, 170),
+            Hover = Color3.fromRGB(204,174,136),
             HoverChange = 0.04
         }
     end
