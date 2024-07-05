@@ -124,7 +124,7 @@ do
         local MenuKeybind = section:AddKeybind("MenuKeybind", {Title = "Minimize Bind", Default = Settings.MenuKeybind})
         MenuKeybind:OnChanged(
             function()
-                Settings.MenuKeybind = MenuKeybind.Value
+                Settings.MenuKeybind = MenuKeybind.F6
                 InterfaceManager:SaveSettings()
             end
         )
