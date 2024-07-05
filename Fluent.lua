@@ -44,7 +44,7 @@ local a, b = {
                     {53, "ModuleScript", {"Rose"}},
                     {49, "ModuleScript", {"Aqua"}},
                     {48, "ModuleScript", {"Amethyst"}},
-                    {54, "ModuleScript", {"Milk"}}
+                    {54, "ModuleScript", {"Milk Tea"}}
                 }
             },
             {
@@ -5333,13 +5333,13 @@ end,
         [54] = function()
         local aa, ab, ac, ad, ae = b(54)
         return {
-            Name = "Milk",
+            Name = "Milk Tea",
             Accent = Color3.fromRGB(118,86,64),
             AcrylicMain = Color3.fromRGB(40, 40, 40),
-            AcrylicBorder = Color3.fromRGB(130, 90, 110),
+            AcrylicBorder = Color3.fromRGB(118,86,64),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(166,123,91), Color3.fromRGB(138,98,74)),
             AcrylicNoise = 0.92,
-            TitleBarLine = Color3.fromRGB(140, 85, 105),
+            TitleBarLine = Color3.fromRGB(118,86,64),
             Tab = Color3.fromRGB(204,174,136),
             Element = Color3.fromRGB(177,143,106),
             ElementBorder = Color3.fromRGB(130, 90, 110),
