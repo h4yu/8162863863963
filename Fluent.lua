@@ -1,4 +1,30 @@
+-- Clean up existing ScreenGui instances
+for _, v in ipairs(game.CoreGui:GetChildren()) do
+    if v:IsA("ScreenGui") and v.Name == "Cre : h4uy" then
+        v:Destroy()
+    end
+end
 
+-- Create new ScreenGui and its components
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Name = "Cre : h4uy"
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=18318099219"
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
+end)
+UICorner.Parent = ImageButton
 local a, b = {
     {
         1,
