@@ -7,7 +7,7 @@ do
         Theme = "Amethyst",
         Acrylic = false,
         Transparency = true,
-        MenuKeybind = "Home"
+        MenuKeybind = "F6"
     }
 
     function InterfaceManager:SetFolder(folder)
