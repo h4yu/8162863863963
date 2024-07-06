@@ -469,7 +469,7 @@ function redzlib:MakeWindow(Configs)
   local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
     Size = UDim2.fromOffset(UISizeX, UISizeY),
     Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-    BackgroundTransparency = 0.04,
+    BackgroundTransparency = 0.4,
     Image = "http://www.roblox.com/asset/?id=18363452575",
     Name = "Hub"
   }), "Main")Make("Gradient", MainFrame, {
@@ -895,7 +895,7 @@ function redzlib:MakeWindow(Configs)
       CreateTween({LabelTitle, "TextTransparency", 0, 0.35})
       CreateTween({LabelIcon, "ImageTransparency", 0, 0.35})
       CreateTween({Selected, "Size", UDim2.new(0, 4, 0, 13), 0.35})
-      CreateTween({Selected, "BackgroundTransparency", 0, 0.35})
+      CreateTween({Selected, "BackgroundTransparency", 1, 0.55})
     end
     TabSelect.Activated:Connect(Tabs)
     
@@ -909,7 +909,7 @@ function redzlib:MakeWindow(Configs)
       CreateTween({LabelTitle, "TextTransparency", 0.3, 0.35})
       CreateTween({LabelIcon, "ImageTransparency", 0.3, 0.35})
       CreateTween({Selected, "Size", UDim2.new(0, 4, 0, 4), 0.35})
-      CreateTween({Selected, "BackgroundTransparency", 1, 0.35})
+      CreateTween({Selected, "BackgroundTransparency", 1, 0.55})
     end
     function Tab:Enable()
       Tabs()
