@@ -850,7 +850,7 @@ function redzlib:MakeWindow(Configs)
       Position = UDim2.new(0, 1, 0.5),
       AnchorPoint = Vector2.new(0, 0.5),
       BackgroundColor3 = Theme["Color Theme"],
-      BackgroundTransparency = FirstTab and 1 or 0
+      BackgroundTransparency = FirstTab and 1
     }), "Theme")Make("Corner", Selected, UDim.new(0.5, 0))
     
     local Container = InsertTheme(Create("ScrollingFrame", Containers, {
@@ -896,7 +896,7 @@ function redzlib:MakeWindow(Configs)
       CreateTween({LabelTitle, "TextTransparency", 0, 0.35})
       CreateTween({LabelIcon, "ImageTransparency", 0, 0.35})
       CreateTween({Selected, "Size", UDim2.new(0, 4, 0, 13), 0.35})
-      CreateTween({Selected, "BackgroundTransparency", 1, 0.55})
+      CreateTween({Selected, "BackgroundTransparency", 1, 1})
     end
     TabSelect.Activated:Connect(Tabs)
     
@@ -910,7 +910,7 @@ function redzlib:MakeWindow(Configs)
       CreateTween({LabelTitle, "TextTransparency", 0.3, 0.35})
       CreateTween({LabelIcon, "ImageTransparency", 0.3, 0.35})
       CreateTween({Selected, "Size", UDim2.new(0, 4, 0, 4), 0.35})
-      CreateTween({Selected, "BackgroundTransparency", 1, 0.55})
+      CreateTween({Selected, "BackgroundTransparency", 1, 1})
     end
     function Tab:Enable()
       Tabs()
