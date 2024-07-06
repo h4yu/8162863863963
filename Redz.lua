@@ -469,7 +469,7 @@ function redzlib:MakeWindow(Configs)
   local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
     Size = UDim2.fromOffset(UISizeX, UISizeY),
     Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-    BackgroundTransparency = 0.4,
+    BackgroundTransparency = 1,
     Image = "http://www.roblox.com/asset/?id=18363452575",
     Name = "Hub"
   }), "Main")Make("Gradient", MainFrame, {
@@ -488,7 +488,6 @@ function redzlib:MakeWindow(Configs)
   
   local TopBar = Create("Frame", Components, {
     Size = UDim2.new(1, 0, 0, 28),
-    BackgroundTransparency = 1,
     Name = "Top Bar"
   })
   
