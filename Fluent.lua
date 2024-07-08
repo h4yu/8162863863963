@@ -41,9 +41,9 @@ local a, b = {
                     {52, "ModuleScript", {"Light"}},
                     {51, "ModuleScript", {"Darker"}},
                     {53, "ModuleScript", {"Rose"}},
-                    {54, "ModuleScript", {"MilkTea"}},
                     {49, "ModuleScript", {"Aqua"}},
-                    {48, "ModuleScript", {"Amethyst"}}
+                    {48, "ModuleScript", {"Amethyst"}},
+		    {54, "ModuleScript", {"MilkTea"}}
                 }
             },
             {
