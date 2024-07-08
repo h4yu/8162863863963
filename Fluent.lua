@@ -3346,7 +3346,7 @@ local aa = {
         end
         return c
     end,
- [25] = function()
+[25] = function()
     local aa, ab, ac, ad, ae = b(25)
     local af = ab.Parent.Parent
     local ag, ah, ai, aj = af.Components, ac(af.Packages.Flipper), ac(af.Creator), {}
@@ -3359,18 +3359,15 @@ local aa = {
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 0.92
         e.Border.Transparency = 0.6
+        setmetatable(e, aj)
         return e
     end
 
-    function aj:setvalue(key, value)
-        if self[key] ~= nil then
-            self[key] = value
-        else
-            error("Invalid key: " .. tostring(key))
-        end
+    function aj:SetValue(d)
+        assert(d.Title, "Paragraph - Missing Title")
+        self.Title.Text = d.Title
+        self.Content.Text = d.Content or ""
     end
-
-    return aj
 end,
 
     [26] = function()
