@@ -3354,6 +3354,7 @@ local aa = {
     function aj.New(c, d)
         assert(d.Title, "Paragraph - Missing Title")
         d.Content = d.Content or ""
+        print("Creating Paragraph with Title:", d.Title, "and Content:", d.Content) -- Debugging print
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 0.92
         e.Border.Transparency = 0.6
@@ -3363,6 +3364,7 @@ local aa = {
 
     function aj:SetValue(d)
         assert(d.Title, "Paragraph - Missing Title")
+        print("Setting Paragraph with Title:", d.Title, "and Content:", d.Content) -- Debugging print
         self.Title.Text = d.Title
         self.Content.Text = d.Content or ""
     end
