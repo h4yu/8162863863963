@@ -41,7 +41,7 @@ local a, b = {
                     {52, "ModuleScript", {"Light"}},
                     {51, "ModuleScript", {"Darker"}},
                     {53, "ModuleScript", {"Rose"}},
-                    {54, "ModuleScript", {"Milk Tea"}},
+                    {54, "ModuleScript", {"MilkTea"}},
                     {49, "ModuleScript", {"Aqua"}},
                     {48, "ModuleScript", {"Amethyst"}}
                 }
@@ -5321,7 +5321,7 @@ local aa = {
 [54] = function()
         local aa, ab, ac, ad, ae = b(54)
         return {
-            Name = "Milk Tea",
+            Name = "MilkTea",
             Accent = Color3.fromRGB(118,86,64),
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(118,86,64),
