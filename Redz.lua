@@ -1745,46 +1745,6 @@ function redzlib:MakeWindow(Configs)
         TextSize = 8,
         Text = Desc
       }), "DarkText")
-      
-      local JoinButton = Create("TextButton", FrameHolder, {
-        Size = UDim2.new(1, -14, 0, 16),
-        AnchorPoint = Vector2.new(0.5, 1),
-        Position = UDim2.new(0.5, 0, 1, -7),
-        Text = "Join",
-        Font = Enum.Font.GothamBold,
-        TextSize = 12,
-        TextColor3 = Color3.fromRGB(220, 220, 220),
-        BackgroundColor3 = Color3.fromRGB(50, 150, 50)
-      })Make("Corner", JoinButton, UDim.new(0, 5))
-      
-      local ClickDelay
-      JoinButton.Activated:Connect(function()
-        setclipboard(Invite)
-        if ClickDelay then return end
-        
-        ClickDelay = true
-        SetProps(JoinButton, {
-          Text = "Copied to Clipboard",
-          BackgroundColor3 = Color3.fromRGB(100, 100, 100),
-          TextColor3 = Color3.fromRGB(150, 150, 150)
-        })task.wait(5)
-        SetProps(JoinButton, {
-          Text = "Join",
-          BackgroundColor3 = Color3.fromRGB(50, 150, 50),
-          TextColor3 = Color3.fromRGB(220, 220, 220)
-        })ClickDelay = false
-      end)
-      
-      local DiscordInvite = {}
-      function DiscordInvite:Destroy()
-        InviteHolder:Destroy()
-      end
-      function DiscordInvite:Visible(Bool)
-        if Bool == nil then InviteHolder.Visible = not InviteHolder.Visible return end
-        InviteHolder.Visible = Bool
-      end
-      return DiscordInvite
-    end
     return Tab
   end
   
