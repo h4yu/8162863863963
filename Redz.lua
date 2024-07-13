@@ -1745,8 +1745,18 @@ function redzlib:MakeWindow(Configs)
         TextSize = 8,
         Text = Desc
       }), "DarkText")
+	local DiscordInvite = {}
+      function DiscordInvite:Destroy()
+        InviteHolder:Destroy()
+      end
+      function DiscordInvite:Visible(Bool)
+        if Bool == nil then InviteHolder.Visible = not InviteHolder.Visible return end
+        InviteHolder.Visible = Bool
+      end
+      return DiscordInvite
+    end
     return Tab
-  end
+	end
   
   CloseButton.Activated:Connect(Window.CloseBtn)
   MinimizeButton.Activated:Connect(Window.MinimizeBtn)
