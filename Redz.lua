@@ -1711,6 +1711,7 @@ function redzlib:MakeWindow(Configs)
       local FrameHolder = InsertTheme(Create("Frame", InviteHolder, {
         Size = UDim2.new(1, 0, 0, 65),
         AnchorPoint = Vector2.new(0, 1),
+	BackgroundTransparency = 0.7,
         Position = UDim2.new(0, 0, 1),
         BackgroundColor3 = Theme["Color Hub 2"]
       }), "Frame")Make("Corner", FrameHolder)
