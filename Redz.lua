@@ -256,6 +256,7 @@ AddEle("Button", function(parent, props, ...)
   local New = InsertTheme(SetProps(Create("TextButton", parent, {
     Text = "",
     Size = UDim2.fromScale(1, 1),
+    BackgroundTransparency = 1,					
     BackgroundColor3 = Theme["Color Hub 2"],
     AutoButtonColor = false
   }), props), "Frame")
@@ -761,8 +762,8 @@ function redzlib:MakeWindow(Configs)
     MainCorner:Clone().Parent = Screen
     Frame.Parent = Screen
     CreateTween({Frame, "Size", UDim2.fromOffset(250, 150), 0.2})
-    CreateTween({Frame, "Transparency", 0, 0.15})
-    CreateTween({Screen, "Transparency", 0.3, 0.15})
+    CreateTween({Frame, "Transparency", 1, 1})
+    CreateTween({Screen, "Transparency", 1, 1})
     
     local ButtonCount, Dialog = 1, {}
     function Dialog:Button(Configs)
@@ -789,8 +790,8 @@ function redzlib:MakeWindow(Configs)
     end
     function Dialog:Close()
       CreateTween({Frame, "Size", UDim2.fromOffset(250 * 1.08, 150 * 1.08), 0.2})
-      CreateTween({Screen, "Transparency", 1, 0.15})
-      CreateTween({Frame, "Transparency", 1, 0.15, true})
+      CreateTween({Screen, "Transparency", 1, 1})
+      CreateTween({Frame, "Transparency", 1, 1, true})
       Screen:Destroy()
     end
     table.foreach(DOptions, function(_,Button)
@@ -820,6 +821,7 @@ function redzlib:MakeWindow(Configs)
     end
     
     local TabSelect = Make("Button", MainScroll, {
+      BackgroundTransparency = 1,
       Size = UDim2.new(1, 0, 0, 24)
     })Make("Corner", TabSelect)
     
@@ -850,7 +852,7 @@ function redzlib:MakeWindow(Configs)
       Position = UDim2.new(0, 1, 0.5),
       AnchorPoint = Vector2.new(0, 0.5),
       BackgroundColor3 = Theme["Color Theme"],
-      BackgroundTransparency = FirstTab and 1 or 0
+      BackgroundTransparency = FirstTab and 1 
     }), "Theme")Make("Corner", Selected, UDim.new(0.5, 0))
     
     local Container = InsertTheme(Create("ScrollingFrame", Containers, {
