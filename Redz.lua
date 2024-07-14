@@ -312,6 +312,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 
   local Frame = Make("Button", Instance, {
     Size = UDim2.new(1, 0, 0, 25),
+    BackgroundTransparency = 1,
     AutomaticSize = "Y",
     Name = "Option"
   })Make("Corner", Frame, UDim.new(0, 6))
