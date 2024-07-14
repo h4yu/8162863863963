@@ -261,10 +261,10 @@ AddEle("Button", function(parent, props, ...)
   }), props), "Frame")
   
   New.MouseEnter:Connect(function()
-    New.BackgroundTransparency = 0.4
+    New.BackgroundTransparency = 1
   end)
   New.MouseLeave:Connect(function()
-    New.BackgroundTransparency = 0
+    New.BackgroundTransparency = 1
   end)
   if args[1] then
     New.Activated:Connect(args[1])
