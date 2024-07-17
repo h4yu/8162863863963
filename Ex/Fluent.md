@@ -5,7 +5,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wuynnz/Lib/main/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "AUT",
+    Title = "",
     SubTitle = "by h4uy",
     TabWidth = 30,
     Size = UDim2.fromOffset(480, 400),
