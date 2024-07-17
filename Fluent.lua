@@ -3361,9 +3361,9 @@ local aa = {
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
-        return e
+        return setmetatable({Frame = e.Frame, Content = e.Content}, aj)
     end
-    
+
     function aj:SetValue(title, content)
         if self.Frame and self.Content then
             self.Frame.Title.Text = title
