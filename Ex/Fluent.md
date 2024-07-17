@@ -1,6 +1,6 @@
 # Main
 ``` lua
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wuynnz/Lib/main/FluentCus.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wuynnz/Lib/main/Fluent.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wuynnz/Lib/main/Addons/InterfaceManager.lua"))()
 
