@@ -5363,7 +5363,7 @@ local aa = {
             HoverChange = 0.04
         }
     end,
-[54] = function()
+[55] = function()
     local aa, ab, ac, ad, ae = b(49)
     return {
         Name = "Vampire",
