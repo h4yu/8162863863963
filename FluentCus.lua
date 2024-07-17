@@ -45,7 +45,8 @@ local a, b = {
                     {53, "ModuleScript", {"Rose"}},
                     {49, "ModuleScript", {"Aqua"}},
                     {48, "ModuleScript", {"Amethyst"}},
-                    {54, "ModuleScript", {"Milk"}}
+                    {54, "ModuleScript", {"Milk"}},
+		    {55, "ModuleScript", {"Milk"}},
                 }
             },
             {
@@ -5359,7 +5360,48 @@ local aa = {
             Hover = Color3.fromRGB(204,174,136),
             HoverChange = 0.04
         }
-    end
+    end,
+[54] = function()
+    local aa, ab, ac, ad, ae = b(49)
+    return {
+        Name = "Vampire",
+        Accent = Color3.fromRGB(139, 0, 0), -- Dark Red
+        AcrylicMain = Color3.fromRGB(20, 0, 0), -- Very Dark Red
+        AcrylicBorder = Color3.fromRGB(50, 0, 0), -- Darker Border Red
+        AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 0, 0), Color3.fromRGB(30, 0, 0)), -- Gradient Red
+        AcrylicNoise = 0.85,
+        TitleBarLine = Color3.fromRGB(75, 0, 0), -- Dark Red Line
+        Tab = Color3.fromRGB(100, 0, 0), -- Red
+        Element = Color3.fromRGB(80, 0, 0), -- Darker Red
+        ElementBorder = Color3.fromRGB(40, 0, 0), -- Dark Border Red
+        InElementBorder = Color3.fromRGB(70, 0, 0), -- Inner Border Red
+        ElementTransparency = 0.9,
+        ToggleSlider = Color3.fromRGB(80, 0, 0), -- Slider Red
+        ToggleToggled = Color3.fromRGB(0, 0, 0), -- Black
+        SliderRail = Color3.fromRGB(80, 0, 0), -- Rail Red
+        DropdownFrame = Color3.fromRGB(90, 0, 0), -- Dropdown Red
+        DropdownHolder = Color3.fromRGB(40, 0, 0), -- Holder Red
+        DropdownBorder = Color3.fromRGB(30, 0, 0), -- Border Red
+        DropdownOption = Color3.fromRGB(80, 0, 0), -- Option Red
+        Keybind = Color3.fromRGB(80, 0, 0), -- Keybind Red
+        Input = Color3.fromRGB(80, 0, 0), -- Input Red
+        InputFocused = Color3.fromRGB(30, 0, 0), -- Focused Input Red
+        InputIndicator = Color3.fromRGB(90, 0, 0), -- Indicator Red
+        Dialog = Color3.fromRGB(40, 0, 0), -- Dialog Red
+        DialogHolder = Color3.fromRGB(35, 0, 0), -- Holder Red
+        DialogHolderLine = Color3.fromRGB(30, 0, 0), -- Line Red
+        DialogButton = Color3.fromRGB(40, 0, 0), -- Button Red
+        DialogButtonBorder = Color3.fromRGB(75, 0, 0), -- Button Border Red
+        DialogBorder = Color3.fromRGB(60, 0, 0), -- Dialog Border Red
+        DialogInput = Color3.fromRGB(50, 0, 0), -- Input Red
+        DialogInputLine = Color3.fromRGB(100, 0, 0), -- Input Line Red
+        Text = Color3.fromRGB(255, 255, 255), -- White
+        SubText = Color3.fromRGB(200, 200, 200), -- Light Gray
+        Hover = Color3.fromRGB(80, 0, 0), -- Hover Red
+        HoverChange = 0.06
+    }
+end
+	
 }
 do
     local ab, ac, ad, ae, af, ag, ah, aj, c, e, f, g, h, i, j, k =
