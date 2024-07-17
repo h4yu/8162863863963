@@ -3364,11 +3364,9 @@ local aa = {
         return setmetatable({Frame = e.Frame, Content = e.Content}, aj)
     end
 
-    function aj:SetValue(title, content)
-        if self.Frame and self.Content then
-            self.Frame.Title.Text = title
-            self.Content.Text = content
-        end
+    function aj.SetValue(title, content)
+        self.c = title
+	self.d = content
     end
 
     return aj
