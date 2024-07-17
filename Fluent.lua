@@ -2147,7 +2147,7 @@ local aa = {
                 j(
                 "ImageLabel",
                 {
-                    Image = "rbxassetid://10709791437",
+                    Image = "rbxassetid://18539152735",
                     Size = UDim2.fromOffset(16, 16),
                     AnchorPoint = Vector2.new(1, 0.5),
                     Position = UDim2.new(1, -10, 0.5, 0),
@@ -3349,57 +3349,21 @@ local aa = {
         return c
     end,
 [25] = function()
-    local aa, ab, ac, ad, ae = b(25)
-    local af = ab.Parent.Parent
-    local ag, ah, ai, aj = af.Components, ac(af.Packages.Flipper), ac(af.Creator), {}
-    aj.__index = aj
-    aj.__type = "Paragraph"
-    
-    function aj.New(configs)
-        local PName = configs[1] or configs.Title or "Paragraph"
-        local PDesc = configs[2] or configs.Text or ""
-
-        local e = ac(ag.Element)(PName, PDesc, aj.Container, false)
-        e.Frame.BackgroundTransparency = 1
-        e.Border.Transparency = 0.6
-
-        local Paragraph = setmetatable({Frame = e.Frame, Content = e.Content}, aj)
-        
-        function Paragraph:SetTitle(Val)
-            e:SetTitle(Val)
+        local aa, ab, ac, ad, ae = b(25)
+        local af = ab.Parent.Parent
+        local ag, ah, ai, aj = af.Components, ac(af.Packages.Flipper), ac(af.Creator), {}
+        aj.__index = aj
+        aj.__type = "Paragraph"
+        function aj.New(c, d)
+            assert(d.Title, "Paragraph - Missing Title")
+            d.Content = d.Content or ""
+            local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
+            e.Frame.BackgroundTransparency = 1
+            e.Border.Transparency = 0.6
+            return e
         end
-
-        function Paragraph:SetDesc(Val)
-            e:SetDesc(Val)
-        end
-
-        function Paragraph:Set(Val1, Val2)
-            if type(Val1) == "string" and type(Val2) == "string" then
-                e:SetTitle(Val1)
-                e:SetDesc(Val2)
-            else
-                e:SetDesc(Val1)
-            end
-        end
-
-        function Paragraph:Visible(Bool)
-            if Bool == nil then 
-                self.Frame.Visible = not self.Frame.Visible 
-                return 
-            end
-            self.Frame.Visible = Bool
-        end
-
-        function Paragraph:Destroy()
-            self.Frame:Destroy()
-        end
-
-        return Paragraph
-    end
-
-    return aj
-end,
-	
+        return aj
+    end,	
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
@@ -4432,7 +4396,8 @@ end,
                 ["lucide-x-square"] = "rbxassetid://10747384217",
                 ["lucide-zoom-in"] = "rbxassetid://10747384552",
                 ["lucide-zoom-out"] = "rbxassetid://10747384679",
-                ["lucide-Sakuya"] = "rbxassetid://18535317830"
+                ["lucide-Sakuya"] = "rbxassetid://18535317830",
+                ["lucide-Scythe"] = "rbxassetid://18539152735"
             }
         }
     end,
