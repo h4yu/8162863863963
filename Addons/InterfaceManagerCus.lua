@@ -1,7 +1,7 @@
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "H4ySettings"
+	InterfaceManager.Folder = "H4yuSettings"
     InterfaceManager.Settings = {
         Theme = "Dark",
         Acrylic = true,
