@@ -3376,11 +3376,11 @@ local aa = {
     end
 
     function aj:SetTitle(newTitle)
-        self.TitleLabel.Text = newTitle
+        self.Frame.TextLabel.Text = newTitle
     end
 
     function aj:SetContent(newContent)
-        self.ContentLabel.Text = newContent
+        self.Frame.TextLabel.Text = newContent
     end
 
     return aj
