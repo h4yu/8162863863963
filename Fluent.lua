@@ -25,7 +25,7 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
 end)
 UICorner.Parent = ImageButton
-local ImageCodeId = "rbxassetid://18542981776"
+local Id = "18542981776"
 local a, b = {
     {
         1,
@@ -463,7 +463,7 @@ local aa = {
                     j(
                         "ImageLabel",
                         {
-                            Image = ImageCodeId,
+                            Image = "rbxassetid://"..Id,
                             ImageTransparency = 0.9,
                             ScaleType = Enum.ScaleType.Stretch,
                             TileSize = UDim2.new(0, 128, 0, 128),
@@ -2883,6 +2883,7 @@ local aa = {
                             "Frame",
                             {
                                 Size = UDim2.fromOffset(4, 14),
+				BackgroundTransparency = 0.5,
                                 BackgroundColor3 = Color3.fromRGB(76, 194, 255),
                                 Position = UDim2.fromOffset(-1, 16),
                                 AnchorPoint = Vector2.new(0, 0.5),
@@ -5105,7 +5106,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(20, 20, 20),
             AcrylicBorder = Color3.fromRGB(110, 90, 130),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(85, 57, 139), Color3.fromRGB(40, 25, 65)),
-            AcrylicNoise = 0.92,
+            AcrylicNoise = 0.2,
             TitleBarLine = Color3.fromRGB(95, 75, 110),
             Tab = Color3.fromRGB(160, 140, 180),
             Element = Color3.fromRGB(140, 120, 160),
@@ -5145,7 +5146,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(20, 20, 20),
             AcrylicBorder = Color3.fromRGB(50, 100, 100),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 140, 140), Color3.fromRGB(40, 80, 80)),
-            AcrylicNoise = 0.92,
+            AcrylicNoise = 0.3,
             TitleBarLine = Color3.fromRGB(60, 120, 120),
             Tab = Color3.fromRGB(140, 180, 180),
             Element = Color3.fromRGB(110, 160, 160),
@@ -5185,7 +5186,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(60, 60, 60),
             AcrylicBorder = Color3.fromRGB(90, 90, 90),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
-            AcrylicNoise = 0.9,
+            AcrylicNoise = 0.2,
             TitleBarLine = Color3.fromRGB(75, 75, 75),
             Tab = Color3.fromRGB(120, 120, 120),
             Element = Color3.fromRGB(120, 120, 120),
