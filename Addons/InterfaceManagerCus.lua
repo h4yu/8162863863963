@@ -60,7 +60,7 @@ local InterfaceManager = {} do
         local Settings = InterfaceManager.Settings
 
         InterfaceManager:LoadSettings()
-
+        Library.Id = ""
         local section = tab:AddSection("Theme")
 
         local InputTheme = section:AddInput("ThemeInput", {
@@ -71,7 +71,7 @@ local InterfaceManager = {} do
             Numeric = false,
             Finished = true, 
             Callback = function(Value)
-                Library.Id = "rbxassetid://"..Value
+                Library.Id = Value
             end
         })
 
