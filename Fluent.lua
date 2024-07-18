@@ -3366,11 +3366,9 @@ local aa = {
         e.Border.Transparency = 0.6
         
         local self = setmetatable({}, aj)
-        self.Frame = e.Frame
-        self.Border = e.Border
-        self.Title = e.Title -- Assuming the title is accessible via e.Title
-        self.Content = e.Content -- Assuming the content is accessible via e.Content
         self.Element = e
+        self.Title = e.Title -- Assuming e.Title is the title UI element
+        self.Content = e.Content -- Assuming e.Content is the content UI element
 
         return self
     end
@@ -3386,7 +3384,6 @@ local aa = {
 
     return aj
 end,
-
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
