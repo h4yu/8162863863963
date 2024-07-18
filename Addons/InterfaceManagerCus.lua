@@ -1,5 +1,4 @@
 local httpService = game:GetService("HttpService")
-
 local InterfaceManager = {} do
 	InterfaceManager.Folder = "H4yuSettings"
     InterfaceManager.Settings = {
@@ -64,14 +63,14 @@ local InterfaceManager = {} do
 
 		local section = tab:AddSection("Theme")
 local InputTheme = section:AddInput("ThemeInput", {
-    Title = "Set Iamge :",
+    Title = "Set Image :",
     Description = "Set Image Of Hub",
     Default = "18542981776",
     Placeholder = "Placeholder",
     Numeric = false,
     Finished = true, 
     Callback = function(Value)
-        Library.Id = Value
+        Fluent.Id = "rbxassetid://"..Value
     end
 })
 
