@@ -3374,7 +3374,7 @@ local aa = {
     end
 
     function aj:SetValue(Value)
-        self.Frame.Text = Value
+        self.Frame.TextButton.Frame.Text = Value
     end
 
     return aj
