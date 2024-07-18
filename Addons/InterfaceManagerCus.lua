@@ -5,7 +5,8 @@ local InterfaceManager = {} do
         Theme = "Dark",
         Acrylic = true,
         Transparency = true,
-        MenuKeybind = "F6"
+        MenuKeybind = "F6",
+        ImageId = "18542981776" -- Add ImageId to settings
     }
 
     function InterfaceManager:SetFolder(folder)
@@ -60,18 +61,20 @@ local InterfaceManager = {} do
         local Settings = InterfaceManager.Settings
 
         InterfaceManager:LoadSettings()
-        Library.Id = ""
+
         local section = tab:AddSection("Theme")
 
         local InputTheme = section:AddInput("ThemeInput", {
             Title = "Set Image :",
             Description = "Set Image Of Hub",
-            Default = "18542981776",
+            Default = Settings.ImageId,
             Placeholder = "Id",
             Numeric = false,
-            Finished = true, 
+            Finished = true,
             Callback = function(Value)
-                Library.Id = Value
+                Fluent.Id = "rbxassetid://" .. Value
+                Settings.ImageId = Value
+                InterfaceManager:SaveSettings()
             end
         })
 
