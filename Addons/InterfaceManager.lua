@@ -80,18 +80,21 @@ game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()[2].Fram
         local ImageTheme = section:AddDropdown("ImageTheme", {
             Title = "Set Image : ",
             Description = "Changes the hub image.",
-            Values = {"Your lie in april", "Hina (Blue Archive)", " Mika (Blue Archive)"},
-            Default = Settings.Theme,
+            Values = {"Your lie in april", "Hina (Blue Archive)", "Mika (Blue Archive)"},
+            Default = 1,
             Callback = function(Value)
                 if Value == "Your lie in april" then
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()[2].Frame:GetChildren()[6].Image = "rbxassetid://18363452575"
             Settings.ImageId = "18363452575"
+            InputTheme.Default = "18363452575"
                 elseif Value == "Hina (Blue Archive)" then
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()[2].Frame:GetChildren()[6].Image = "rbxassetid://18542981776"
             Settings.ImageId = "18542981776"
+            InputTheme.Default = "18542981776"
                 elseif Value == "Mika (Blue Archive)" then
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()[2].Frame:GetChildren()[6].Image = "rbxassetid://18481502275"
             Settings.ImageId = "18481502275"
+            InputTheme.Default = "18481502275"
                 end
                 InterfaceManager:SaveSettings()
             end
