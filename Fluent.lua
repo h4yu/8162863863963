@@ -25,7 +25,7 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
 end)
 UICorner.Parent = ImageButton
-local Id = "18542981776"
+local Id = "1"
 local a, b = {
     {
         1,
