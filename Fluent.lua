@@ -3366,20 +3366,16 @@ local aa = {
         e.Border.Transparency = 0.6
         
         local self = setmetatable({}, aj)
+        self.Frame = e.Frame
+        self.Border = e.Border
         self.Element = e
-        self.Title = e.Title -- Assuming e.Title is the title UI element
-        self.Content = e.Content -- Assuming e.Content is the content UI element
 
         return self
     end
 
     function aj:SetValue(newTitle, newContent)
-        if newTitle then
-            self.Title.Text = newTitle -- Update the title text
-        end
-        if newContent then
-            self.Content.Text = newContent -- Update the content text
-        end
+        self.Frame.TextButton = newTitle
+        self.Frame.TextButton = newContent
     end
 
     return aj
