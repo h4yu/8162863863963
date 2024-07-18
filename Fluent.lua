@@ -3366,10 +3366,9 @@ local aa = {
         e.Border.Transparency = 0.6
         
         local self = setmetatable({}, aj)
-        self.Frame = e.Frame
         self.Border = e.Border
         self.Element = e
-        self.TextLabel = e.Frame.TextLabel  -- Reference to the TextLabel
+        self.TextLabel = e.Frame.TextLabel 
 
         return self
     end
