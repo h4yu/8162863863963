@@ -63,6 +63,16 @@ local InterfaceManager = {} do
         InterfaceManager:LoadSettings()
 
         local section = tab:AddSection("Theme")
+        local InputTheme = section:AddInput("ThemeInput", {
+            Title = "Set Image :",
+            Description = "Set Image Of Hub",
+            Default = "",
+            Placeholder = "rbxassetid://",
+            Numeric = false,
+            Finished = true,
+            Callback = function(Value)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()[2].Frame:GetChildren()[6].Image = "rbxassetid://"..Value
+        end})
 
         
 
