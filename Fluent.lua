@@ -3364,6 +3364,7 @@ local aa = {
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
+        setmetatable(e, aj)
         return e
     end
 
@@ -3379,6 +3380,7 @@ local aa = {
 
     return aj
 end,
+
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
