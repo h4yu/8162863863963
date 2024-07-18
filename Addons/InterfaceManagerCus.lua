@@ -62,7 +62,18 @@ local InterfaceManager = {} do
 
         InterfaceManager:LoadSettings()
 
-		local section = tab:AddSection("Interface")
+		local section = tab:AddSection("Theme")
+local InputTheme = section:AddInput("ThemeInput", {
+    Title = "Set Iamge :",
+    Description = "Set Image Of Hub",
+    Default = "18542981776",
+    Placeholder = "Placeholder",
+    Numeric = false,
+    Finished = true, 
+    Callback = function(Value)
+        Library.Id = Value
+    end
+})
 
 		local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
 			Title = "Theme",
