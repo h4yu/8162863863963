@@ -3368,18 +3368,25 @@ local aa = {
         local self = setmetatable({}, aj)
         self.Frame = e.Frame
         self.Border = e.Border
+        self.Title = e.Title -- Assuming the title is accessible via e.Title
+        self.Content = e.Content -- Assuming the content is accessible via e.Content
         self.Element = e
 
         return self
     end
 
     function aj:SetValue(newTitle, newContent)
-        self.Frame.TextLabel.Text = newTitle
-        self.Frame.TextLabel.Text = newContent
+        if newTitle then
+            self.Title.Text = newTitle -- Update the title text
+        end
+        if newContent then
+            self.Content.Text = newContent -- Update the content text
+        end
     end
 
     return aj
 end,
+
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
