@@ -778,7 +778,7 @@ local aa = {
             local q = {}
             q.TitleLabel =
                 k(
-                "TitleLabel",
+                "TextLabel",
                 {
                     FontFace = Font.new(
                         "rbxasset://fonts/families/GothamSSm.json",
@@ -797,7 +797,7 @@ local aa = {
             )
             q.DescLabel =
                 k(
-                "ContentLabel",
+                "TextLabel",
                 {
                     FontFace = Font.new "rbxasset://fonts/families/GothamSSm.json",
                     Text = n,
