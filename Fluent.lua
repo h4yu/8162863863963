@@ -25,7 +25,7 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
 end)
 UICorner.Parent = ImageButton
-local ImageCodeId = "rbxassetid://18363452575"
+local ImageCodeId = "rbxassetid://18542981776"
 local a, b = {
     {
         1,
@@ -674,6 +674,7 @@ local aa = {
                 {
                     Size = UDim2.new(1, 0, 0, 70),
                     Position = UDim2.new(0, 0, 1, -70),
+		    BackgroundTransparency = 0.6,
                     ThemeTag = {BackgroundColor3 = "DialogHolder"}
                 },
                 {
@@ -1608,11 +1609,11 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Dialog {
-                        Title = "Close",
-                        Content = "Are you sure you want to unload the interface?",
-                        Buttons = {{Title = "Yes", Callback = function()
+                        Title = "H4yu",
+                        Content = "Are you sure you want to close the hub ??🥺🥺",
+                        Buttons = {{Title = "Ofc", Callback = function()
                                     p:Destroy()
-                                end}, {Title = "No"}}
+                                end}, {Title = "Noo"}}
                     }
                 end
             )
@@ -1909,7 +1910,7 @@ local aa = {
                 if not C then
                     C = true
                     local N = u.MinimizeKeybind and u.MinimizeKeybind.Value or u.MinimizeKey.Name
-                    u:Notify {Title = "Interface", Content = "Press " .. N .. " to toggle the inteface.", Duration = 6}
+                    u:Notify {Title = "H4yu", Content = "Press " .. N .. " to toggle the inteface.", Duration = 6}
                 end
             end
             function v.Destroy(M)
