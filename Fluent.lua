@@ -45,7 +45,7 @@ local a, b = {
                     {53, "ModuleScript", {"Rose"}},
                     {49, "ModuleScript", {"Aqua"}},
                     {48, "ModuleScript", {"Amethyst"}},
-                    {54, "ModuleScript", {"Milk"}},
+                    {54, "ModuleScript", {"Milk Tea"}},
 		    {50, "ModuleScript", {"Dark"}}
                 }
             },
@@ -5088,7 +5088,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose", "Milk"}}
+        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose", "Milk Tea", "Vampire"}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
@@ -5326,7 +5326,7 @@ local aa = {
         [54] = function()
         local aa, ab, ac, ad, ae = b(54)
         return {
-            Name = "Milk",
+            Name = "Milk Tea",
             Accent = Color3.fromRGB(118,86,64),
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(118,86,64),
@@ -5362,8 +5362,8 @@ local aa = {
             Hover = Color3.fromRGB(204,174,136),
             HoverChange = 0.04
         }
-    end,
-[55] = function()
+end,
+    [55] = function()
     local aa, ab, ac, ad, ae = b(55)
     return {
         Name = "Vampire",
@@ -5403,7 +5403,6 @@ local aa = {
         HoverChange = 0.06
     }
 end
-	
 }
 do
     local ab, ac, ad, ae, af, ag, ah, aj, c, e, f, g, h, i, j, k =
