@@ -3364,26 +3364,21 @@ local aa = {
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
-        
-        local self = setmetatable({}, aj)
-        self.Border = e.Border
-        self.Element = e
-        self.TextLabel = e.Frame.TextLabel 
-
-        return self
+        return e
     end
 
-    function aj:SetTitle(newTitle)
-        self.TextLabel.Text = newTitle
-    end
-
-    function aj:SetContent(newContent)
-        self.TextLabel.Text = newContent
+    function aj:SetValue(title, content)
+        assert(title, "Paragraph - Missing Title")
+        content = content or ""
+        self.Title = title
+        self.Content = content
+        -- Assuming Element has methods to update title and content
+        self.Frame.Title.Text = title
+        self.Frame.Content.Text = content
     end
 
     return aj
 end,
-
 
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
