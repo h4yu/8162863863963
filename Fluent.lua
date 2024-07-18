@@ -3368,8 +3368,10 @@ local aa = {
         function e.SetValue(t, c)
             assert(t, "Paragraph - Missing Title")
             c = c or ""
-            e.Title = t
-            e.Content = c
+            e.d.Title = t
+            e.d.Content = c
+	    e.Frame.Title.Text = t
+            e.Frame.Content.Text = c
         end
 
         setmetatable(e, aj)
@@ -5429,7 +5431,6 @@ end,
             AcrylicBorder = Color3.fromRGB(90, 90, 90),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
             AcrylicNoise = 0,
-	    
             TitleBarLine = Color3.fromRGB(75, 75, 75),
             Tab = Color3.fromRGB(237, 169, 255),
             Element = Color3.fromRGB(120, 120, 120),
@@ -5455,7 +5456,7 @@ end,
             DialogBorder = Color3.fromRGB(70, 70, 70),
             DialogInput = Color3.fromRGB(55, 55, 55),
             DialogInputLine = Color3.fromRGB(160, 160, 160),
-            Text = Color3.fromRGB(240, 240, 240),
+            Text = Color3.fromRGB(255, 105, 180),
             SubText = Color3.fromRGB(255, 182, 193),
             Hover = Color3.fromRGB(120, 120, 120),
             HoverChange = 0.07
