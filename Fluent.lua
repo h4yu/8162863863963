@@ -46,7 +46,7 @@ local a, b = {
                     {49, "ModuleScript", {"Aqua"}},
                     {48, "ModuleScript", {"Amethyst"}},
                     {54, "ModuleScript", {"Milk Tea"}},
-		    {50, "ModuleScript", {"Dark"}}
+		    {50, "ModuleScript", {"Mika"}}
                 }
             },
             {
@@ -462,9 +462,9 @@ local aa = {
                     j(
                         "ImageLabel",
                         {
-                            Image = "rbxassetid://9968344227",
+                            Image = "rbxassetid://18481502275",
                             ImageTransparency = 0.9,
-                            ScaleType = Enum.ScaleType.Tile,
+                            ScaleType = Enum.ScaleType.Stretch,
                             TileSize = UDim2.new(0, 128, 0, 128),
                             Size = UDim2.fromScale(1, 1),
                             BackgroundTransparency = 1,
@@ -5088,7 +5088,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {Names = {"Dark", "Darker", "Light", "Aqua", "Amethyst", "Rose", "Milk Tea", "Vampire"}}
+        local af = {Names = {"Mika", "Darker", "Light", "Aqua", "Amethyst", "Rose", "Milk Tea", "Vampire"}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
@@ -5178,14 +5178,14 @@ local aa = {
     [50] = function()
         local aa, ab, ac, ad, ae = b(50)
         return {
-            Name = "Dark",
-            Accent = Color3.fromRGB(96, 205, 255),
+            Name = "Mika",
+            Accent = Color3.fromRGB(221, 174, 235),
             AcrylicMain = Color3.fromRGB(60, 60, 60),
             AcrylicBorder = Color3.fromRGB(90, 90, 90),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
-            AcrylicNoise = 0.9,
+            AcrylicNoise = 0,
             TitleBarLine = Color3.fromRGB(75, 75, 75),
-            Tab = Color3.fromRGB(120, 120, 120),
+            Tab = Color3.fromRGB(237, 169, 255),
             Element = Color3.fromRGB(120, 120, 120),
             ElementBorder = Color3.fromRGB(35, 35, 35),
             InElementBorder = Color3.fromRGB(90, 90, 90),
@@ -5210,7 +5210,7 @@ local aa = {
             DialogInput = Color3.fromRGB(55, 55, 55),
             DialogInputLine = Color3.fromRGB(160, 160, 160),
             Text = Color3.fromRGB(240, 240, 240),
-            SubText = Color3.fromRGB(170, 170, 170),
+            SubText = Color3.fromRGB(255, 182, 193),
             Hover = Color3.fromRGB(120, 120, 120),
             HoverChange = 0.07
         }
@@ -5223,7 +5223,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(25, 25, 25), Color3.fromRGB(15, 15, 15)),
-            AcrylicNoise = 0.94,
+            AcrylicNoise = 0.3,
             TitleBarLine = Color3.fromRGB(65, 65, 65),
             Tab = Color3.fromRGB(100, 100, 100),
             Element = Color3.fromRGB(70, 70, 70),
@@ -5251,7 +5251,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(200, 200, 200),
             AcrylicBorder = Color3.fromRGB(120, 120, 120),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(255, 255, 255), Color3.fromRGB(255, 255, 255)),
-            AcrylicNoise = 0.96,
+            AcrylicNoise = 0.4,
             TitleBarLine = Color3.fromRGB(160, 160, 160),
             Tab = Color3.fromRGB(90, 90, 90),
             Element = Color3.fromRGB(255, 255, 255),
@@ -5291,7 +5291,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(130, 90, 110),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(190, 60, 135), Color3.fromRGB(165, 50, 70)),
-            AcrylicNoise = 0.92,
+            AcrylicNoise = 0.5,
             TitleBarLine = Color3.fromRGB(140, 85, 105),
             Tab = Color3.fromRGB(180, 140, 160),
             Element = Color3.fromRGB(200, 120, 170),
@@ -5331,7 +5331,7 @@ local aa = {
             AcrylicMain = Color3.fromRGB(40, 40, 40),
             AcrylicBorder = Color3.fromRGB(118,86,64),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(166,123,91), Color3.fromRGB(138,98,74)),
-            AcrylicNoise = 0.92,
+            AcrylicNoise = 0.5,
             TitleBarLine = Color3.fromRGB(118,86,64),
             Tab = Color3.fromRGB(204,174,136),
             Element = Color3.fromRGB(177,143,106),
@@ -5371,7 +5371,7 @@ end,
         AcrylicMain = Color3.fromRGB(20, 0, 0),
         AcrylicBorder = Color3.fromRGB(50, 0, 0),
         AcrylicGradient = ColorSequence.new(Color3.fromRGB(60, 0, 0), Color3.fromRGB(30, 0, 0)), 
-        AcrylicNoise = 0.85,
+        AcrylicNoise = 0.6,
         TitleBarLine = Color3.fromRGB(75, 0, 0), 
         Tab = Color3.fromRGB(100, 0, 0), 
         Element = Color3.fromRGB(80, 0, 0), 
