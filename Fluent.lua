@@ -3374,8 +3374,8 @@ local aa = {
     end
 
     function aj:SetValue(newTitle, newContent)
-        self.Frame.Title.Text = newTitle
-        self.Frame.Content.Text = newContent
+        self.Frame.TextLabel.Text = newTitle
+        self.Frame.TextLabel.Text = newContent
     end
 
     return aj
