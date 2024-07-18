@@ -3369,23 +3369,21 @@ local aa = {
         self.Frame = e.Frame
         self.Border = e.Border
         self.Element = e
-        self.TitleLabel = e.Frame.TitleLabel  -- Assuming TitleLabel is the title TextLabel
-        self.ContentLabel = e.Frame.ContentLabel  -- Assuming ContentLabel is the content TextLabel
+        self.TextLabel = e.Frame.TextLabel  -- Reference to the TextLabel
 
         return self
     end
 
     function aj:SetTitle(newTitle)
-        self.Frame.TextLabel.Text = newTitle
+        self.TextLabel.Text = newTitle
     end
 
     function aj:SetContent(newContent)
-        self.Frame.TextLabel.Text = newContent
+        self.TextLabel.Text = newContent
     end
 
     return aj
 end,
-
 
 
     [26] = function()
