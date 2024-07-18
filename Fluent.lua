@@ -3369,16 +3369,25 @@ local aa = {
         self.Frame = e.Frame
         self.Border = e.Border
         self.Element = e
+        self.TitleLabel = e.Frame.TitleLabel  -- Assuming TitleLabel is the title TextLabel
+        self.ContentLabel = e.Frame.ContentLabel  -- Assuming ContentLabel is the content TextLabel
 
         return self
     end
 
-    function aj:SetValue(Value)
-        self.Frame.Frame.Text = Value
+    function aj:SetTitle(newTitle)
+        self.TitleLabel.Text = newTitle
+    end
+
+    function aj:SetContent(newContent)
+        self.ContentLabel.Text = newContent
     end
 
     return aj
 end,
+
+
+
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
