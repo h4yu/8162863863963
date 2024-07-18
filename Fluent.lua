@@ -3357,32 +3357,27 @@ local aa = {
     local ag, ah, ai, aj = af.Components, ac(af.Packages.Flipper), ac(af.Creator), {}
     aj.__index = aj
     aj.__type = "Paragraph"
-
     function aj.New(c, d)
         assert(d.Title, "Paragraph - Missing Title")
         d.Content = d.Content or ""
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
-
+        e.Title = d.Title
+        e.Content = d.Content
         function e.SetValue(t, c)
             assert(t, "Paragraph - Missing Title")
             c = c or ""
-            e.d.Title = t
-            e.d.Content = c
-	    e.Frame.Title.Text = t
+            e.Title = t
+            e.Content = c
+            e.Frame.Title.Text = t
             e.Frame.Content.Text = c
         end
-
         setmetatable(e, aj)
         return e
     end
-
     return aj
 end,
-
-
-
     [26] = function()
         local aa, ab, ac, ad, ae = b(26)
         local af, ag = game:GetService "UserInputService", ab.Parent.Parent
