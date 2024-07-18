@@ -25,7 +25,7 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
 end)
 UICorner.Parent = ImageButton
-
+local ImageCodeId = "rbxassetid://18481502275"
 local a, b = {
     {
         1,
@@ -463,13 +463,13 @@ local aa = {
                     j(
                         "ImageLabel",
                         {
-                            Image = "rbxassetid://1",
+                            Image = ImageCodeId,
                             ImageTransparency = 0.9,
                             ScaleType = Enum.ScaleType.Stretch,
                             TileSize = UDim2.new(0, 128, 0, 128),
                             Size = UDim2.fromScale(1, 1),
                             BackgroundTransparency = 1,
-                            ThemeTag = {ImageTransparency = "AcrylicNoise", Image = "ImageHub"}
+                            ThemeTag = {ImageTransparency = "AcrylicNoise"}
                         },
                         {j("UICorner", {CornerRadius = UDim.new(0, 8)})}
                     ),
@@ -5413,7 +5413,7 @@ end,
             AcrylicBorder = Color3.fromRGB(90, 90, 90),
             AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
             AcrylicNoise = 0,
-	    ImageHub = "rbxassetid://18481502275",
+	    
             TitleBarLine = Color3.fromRGB(75, 75, 75),
             Tab = Color3.fromRGB(237, 169, 255),
             Element = Color3.fromRGB(120, 120, 120),
