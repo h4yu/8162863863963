@@ -3515,36 +3515,34 @@ end,
     function c.New(d, e, f)
         local g = d.Library
         assert(f.Title, "Toggle - Missing Title")
-        local h = {
+        local h, i = {
             Value = f.Default or false,
-            Callback = f.Callback or function() end,
+            Callback = f.Callback or function(h) end,
             Type = "Toggle"
-        }
-        local i = ac(aj.Element)(f.Title, f.Description, d.Container, true)
+        }, ac(aj.Element)(f.Title, f.Description, d.Container, true)
         i.DescLabel.Size = UDim2.new(1, -54, 0, 14)
-
-        h.SetTitle = function(self, title)
-            i.Text = title
+        
+        -- Adding SetTitle and SetDesc
+        function h.SetTitle(title)
+            i:SetTitle(title)
+        end
+        
+        function h.SetDesc(description)
+            i:SetDesc(description)
         end
 
-        h.SetDesc = function(self, desc)
-            i.DescLabel.Text = desc
-        end
-
-        local j = ai("ImageLabel", {
+        local j, k = ai("ImageLabel", {
             AnchorPoint = Vector2.new(0, 0.5),
             Size = UDim2.fromOffset(14, 14),
             Position = UDim2.new(0, 2, 0.5, 0),
             Image = "http://www.roblox.com/asset/?id=12266946128",
             ImageTransparency = 0.5,
             ThemeTag = {ImageColor3 = "ToggleSlider"}
-        })
-        
-        local k = ai("UIStroke", {
+        }), ai("UIStroke", {
             Transparency = 0.5,
             ThemeTag = {Color = "ToggleSlider"}
         })
-        
+
         local l = ai("Frame", {
             Size = UDim2.fromOffset(36, 18),
             AnchorPoint = Vector2.new(1, 0.5),
@@ -3591,6 +3589,7 @@ end,
 
     return c
 end,
+	
     [28] = function()
         local aa, ab, ac, ad, ae = b(28)
         return {
