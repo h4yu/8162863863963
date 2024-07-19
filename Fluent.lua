@@ -3505,9 +3505,9 @@ end,
         return c
     end,
 
-	[27] = function()
+[27] = function()
     local aa, ab, ac, ad, ae = b(27)
-    local af, ag = game:GetService("TweenService"), ab.Parent.Parent
+    local af, ag = game:GetService "TweenService", ab.Parent.Parent
     local ah = ac(ag.Creator)
     local ai, aj, c = ah.New, ag.Components, {}
     c.__index = c
@@ -3516,17 +3516,11 @@ end,
     function c.New(d, e, f)
         local g = d.Library
         assert(f.Title, "Toggle - Missing Title")
-        local h, i = {
-            Value = f.Default or false,
-            Callback = f.Callback or function(h) end,
-            Type = "Toggle"
-        }, ac(aj.Element)(f.Title, f.Description, d.Container, true)
+        local h, i = {Value = f.Default or false, Callback = f.Callback or function(h) end, Type = "Toggle"}, ac(aj.Element)(f.Title, f.Description, d.Container, true)
         i.DescLabel.Size = UDim2.new(1, -54, 0, 14)
-        
-        -- Linking SetTitle and SetDesc
         h.SetTitle = i.SetTitle
         h.SetDesc = i.SetDesc
-
+        
         local j, k = ai("ImageLabel", {
             AnchorPoint = Vector2.new(0, 0.5),
             Size = UDim2.fromOffset(14, 14),
@@ -3546,11 +3540,7 @@ end,
             Parent = i.Frame,
             BackgroundTransparency = 1,
             ThemeTag = {BackgroundColor3 = "Accent"}
-        }, {
-            ai("UICorner", {CornerRadius = UDim.new(0, 9)}),
-            k,
-            j
-        })
+        }, {ai("UICorner", {CornerRadius = UDim.new(0, 9)}), k, j})
 
         function h.OnChanged(m, n)
             h.Changed = n
@@ -3569,6 +3559,14 @@ end,
             g:SafeCallback(h.Changed, h.Value)
         end
 
+        function h.SetTitle(m, title)
+            i:SetTitle(title)
+        end
+
+        function h.SetDesc(m, description)
+            i:SetDesc(description)
+        end
+
         function h.Destroy(m)
             i:Destroy()
             g.Options[e] = nil
@@ -3582,9 +3580,9 @@ end,
         g.Options[e] = h
         return h
     end
-
     return c
 end,
+
 
     [28] = function()
         local aa, ab, ac, ad, ae = b(28)
