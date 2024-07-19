@@ -2164,6 +2164,12 @@ local aa = {
                     m.Library:SafeCallback(n.Callback)
                 end
             )
+	    function o:SetValue(title, content)
+		n.Title = title
+            self.TitleLabel.Text = title
+               n.Description = content
+            self.DescLabel.Text = content
+	   end
             return o
         end
         return l
