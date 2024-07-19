@@ -3366,10 +3366,9 @@ local aa = {
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
 
-        function e.SetValue(Value)
-            Value = Value or {}
-            Value.t = d.Title
-            Value.c = d.Content
+        function e.SetValue(t, c)
+            t = d.Title or ""
+            c = d.Content or ""
         end
         
         return e
