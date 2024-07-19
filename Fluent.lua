@@ -3504,7 +3504,8 @@ end,
         end
         return c
     end,
-[27] = function()
+
+	[27] = function()
     local aa, ab, ac, ad, ae = b(27)
     local af, ag = game:GetService("TweenService"), ab.Parent.Parent
     local ah = ac(ag.Creator)
@@ -3522,14 +3523,9 @@ end,
         }, ac(aj.Element)(f.Title, f.Description, d.Container, true)
         i.DescLabel.Size = UDim2.new(1, -54, 0, 14)
         
-        -- Adding SetTitle and SetDesc
-        function h.SetTitle(title)
-            i:SetTitle(title)
-        end
-        
-        function h.SetDesc(description)
-            i:SetDesc(description)
-        end
+        -- Linking SetTitle and SetDesc
+        h.SetTitle = i.SetTitle
+        h.SetDesc = i.SetDesc
 
         local j, k = ai("ImageLabel", {
             AnchorPoint = Vector2.new(0, 0.5),
@@ -3589,7 +3585,7 @@ end,
 
     return c
 end,
-	
+
     [28] = function()
         local aa, ab, ac, ad, ae = b(28)
         return {
