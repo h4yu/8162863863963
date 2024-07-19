@@ -3365,12 +3365,6 @@ local aa = {
         local e = ac(ag.Element)(d.Title, d.Content, aj.Container, false)
         e.Frame.BackgroundTransparency = 1
         e.Border.Transparency = 0.6
-
-        function e.SetValue(t, c)
-            t = d.Title or ""
-            c = d.Content or ""
-        end
-        
         return e
     end
     
