@@ -2685,6 +2685,17 @@ local aa = {
             m.DescLabel.Size = UDim2.new(1, -170, 0, 14)
             l.SetTitle = m.SetTitle
             l.SetDesc = m.SetDesc
+
+	function l:SetTitle(title)
+		j.Title = title
+	        self.TitleLabel.Text = title
+	end
+
+        function l:SetContent(content)
+		j.Description = content
+	        self.DescLabel.Text = content
+	end
+	
             local n, o =
                 e(
                     "TextLabel",
