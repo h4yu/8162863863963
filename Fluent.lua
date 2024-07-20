@@ -1610,14 +1610,10 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Dialog {
-                        Title = "H4yu",
-                        Content = "Are you sure you want to close the hub ??🥺🥺",
-                        Buttons = {{Title = "Ofc", Callback = function()
-                                    p:Destroy()
-                                end}, {Title = "Noo"}}
-                    }
-                end
-            )
+                        Title = "Discord",
+                        Content = "Still",
+                        Buttons = {{Title = "Ofc", Callback = function() print("what da sigma") end}, {Title = "Noo"}}}
+                end)
             o.MaxButton =
                 q(
                 i.Max,
@@ -1625,8 +1621,7 @@ local aa = {
                 o.Frame,
                 function()
                     n.Window.Maximize(not n.Window.Maximized)
-                end
-            )
+                end)
             o.MinButton =
                 q(
                 i.Min,
@@ -1634,24 +1629,18 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Minimize()
-                end
-            )
-	    o.Discord =
+                end)
+	    o.DiscordButton =
                 q(
                 i.Discord,
-                UDim2.new(1, -110, 0, 4),
+                UDim2.new(1, -120, 0, 4),
                 o.Frame,
                 function()
-                p.Window:Dialog {
-                        Title = "H4yu",
-                        Content = "Are you sure you want to close the hub ??🥺🥺",
-                        Buttons = {{Title = "Ofc", Callback = function()
-                                    p:Destroy()
-                                end}, {Title = "Noo"}}
-                    }
-                end
-            end
-	    )
+                    p.Window:Dialog {
+                        Title = "Discord",
+                        Content = "Still",
+                        Buttons = {{Title = "Ofc", Callback = function() print("what da sigma") end}, {Title = "Noo"}}}
+                end)
             return o
         end
     end,
