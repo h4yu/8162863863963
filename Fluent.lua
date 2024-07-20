@@ -681,8 +681,23 @@ local aa = {
                 {
                     p("Frame", {Size = UDim2.new(1, 0, 0, 1), ThemeTag = {BackgroundColor3 = "DialogHolderLine"}}),
                     s.ButtonHolder
-                }
-            )
+                },
+                        {
+                            l("UICorner", {CornerRadius = UDim.new(0, 7)}),
+                            l(
+                                "ImageLabel",
+                                {
+                                    Image = "",
+                                    Size = UDim2.fromOffset(16, 16),
+                                    Position = UDim2.fromScale(0.5, 0.5),
+                                    AnchorPoint = Vector2.new(0.5, 0.5),
+                                    BackgroundTransparency = 1,
+                                    Name = "Icon",
+                                    ThemeTag = {ImageColor3 = "Text"}
+                                }
+                            )
+                        }
+		)
             s.Title =
                 p(
                 "TextLabel",
@@ -1637,8 +1652,8 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Dialog {
-                        Title = "Discord",
-                        Content = "Still",
+                        Title = "",
+                        Content = "",
                         Buttons = {{Title = "Ok", Callback = function() print("") end}}}
                 end)
             return o
