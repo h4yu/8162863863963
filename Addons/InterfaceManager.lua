@@ -62,6 +62,44 @@ local InterfaceManager = {} do
 
         InterfaceManager:LoadSettings()
 
+
+        local StuffSec = tab:AddSection("missingem")
+
+        local TimeP = StuffSec:AddParagraph({
+    Title = "Elapsed Time",
+    Content = "Elapsed Time: 00:00:00"
+})
+
+local startTime = tick()  
+
+local function formatTime(seconds)
+    local hours = math.floor(seconds / 3600)
+    local minutes = math.floor((seconds % 3600) / 60)
+    local secs = math.floor(seconds % 60)
+    
+    return string.format("%02d:%02d:%02d", hours, minutes, secs)
+end
+
+local function updateElapsedTime()
+    local elapsedTime = tick() - startTime
+    TimeP:SetContent("Elapsed Time: " .. formatTime(elapsedTime))
+end
+
+local updateCoroutine = coroutine.create(function()
+    while true do
+        updateElapsedTime()
+        wait(1)  
+    end
+end)
+
+local function resumeUpdateCoroutine()
+    if coroutine.status(updateCoroutine) == "suspended" then
+        coroutine.resume(updateCoroutine)
+    end
+end
+
+resumeUpdateCoroutine()
+        
         local section = tab:AddSection("Theme")
         
         local InputTheme = section:AddInput("ThemeInput", {
