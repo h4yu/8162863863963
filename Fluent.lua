@@ -620,7 +620,7 @@ local aa = {
             return p
         end
     end,
-    [10] = function()
+  [10] = function()
         local c, d, e, f, g = b(10)
         local h, i, j, k =
             game:GetService "UserInputService",
@@ -633,164 +633,145 @@ local aa = {
             q.Window = s
             return q
         end
-	function q.Create(r)
-    local s = {Buttons = 0}
-    
-    -- Tint Frame
-    s.TintFrame = p(
-        "TextButton",
-        {
-            Text = "",
-            Size = UDim2.fromScale(1, 1),
-            BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-            BackgroundTransparency = 1,
-            Parent = q.Window.Root
-        },
-        {p("UICorner", {CornerRadius = UDim.new(0, 8)})}
-    )
-    
-    -- Button Holder
-    s.ButtonHolder = p(
-        "Frame",
-        {
-            Size = UDim2.new(1, -40, 1, -40),
-            AnchorPoint = Vector2.new(0.5, 0.5),
-            Position = UDim2.fromScale(0.5, 2.1),
-            BackgroundTransparency = 1
-        },
-        {
-            p(
-                "UIListLayout",
+        function q.Create(r)
+            local s = {Buttons = 0}
+            s.TintFrame =
+                p(
+                "TextButton",
                 {
-                    Padding = UDim.new(0, 10),
-                    FillDirection = Enum.FillDirection.Horizontal,
-                    HorizontalAlignment = Enum.HorizontalAlignment.Center,
-                    SortOrder = Enum.SortOrder.LayoutOrder
+                    Text = "",
+                    Size = UDim2.fromScale(1, 1),
+                    BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+                    BackgroundTransparency = 1,
+                    Parent = q.Window.Root
+                },
+                {p("UICorner", {CornerRadius = UDim.new(0, 8)})}
+            )
+            local t, u = m.SpringMotor(1, s.TintFrame, "BackgroundTransparency", true)
+            s.ButtonHolder =
+                p(
+                "Frame",
+                {
+                    Size = UDim2.new(1, -40, 1, -40),
+                    AnchorPoint = Vector2.new(0.5, 0.5),
+                    Position = UDim2.fromScale(0.5, 2.1),
+                    BackgroundTransparency = 1
+                },
+                {
+                    p(
+                        "UIListLayout",
+                        {
+                            Padding = UDim.new(0, 10),
+                            FillDirection = Enum.FillDirection.Horizontal,
+                            HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                            SortOrder = Enum.SortOrder.LayoutOrder
+                        }
+                    )
                 }
             )
-        }
-    )
-    
-    -- Button Holder Frame
-    s.ButtonHolderFrame = p(
-        "Frame",
-        {
-            Size = UDim2.new(1, 0, 0, 70),
-            Position = UDim2.new(0, 0, 1, -180),
-            BackgroundTransparency = 0.6,
-            ThemeTag = {BackgroundColor3 = "DialogHolder"}
-        },
-        {
-            p("Frame", {Size = UDim2.new(1, 0, 0, 1), ThemeTag = {BackgroundColor3 = "DialogHolderLine"}}),
-            s.ButtonHolder
-        }
-    )
-    
-    -- Title
-    s.Title = p(
-        "TextLabel",
-        {
-            FontFace = Font.new(
-                "rbxasset://fonts/families/GothamSSm.json",
-                Enum.FontWeight.SemiBold,
-                Enum.FontStyle.Normal
-            ),
-            Text = "Dialog",
-            TextColor3 = Color3.fromRGB(240, 240, 240),
-            TextSize = 22,
-            TextXAlignment = Enum.TextXAlignment.Left,
-            Size = UDim2.new(1, 0, 0, 22),
-            Position = UDim2.fromOffset(20, 25),
-            BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-            BackgroundTransparency = 1,
-            ThemeTag = {TextColor3 = "Text"}
-        }
-    )
-    
-    -- Scale
-    s.Scale = p("UIScale", {Scale = 1})
-    local v, w = m.SpringMotor(1.1, s.Scale, "Scale")
-    
-    -- Root CanvasGroup
-    s.Root = p(
-        "CanvasGroup",
-        {
-            Size = UDim2.fromOffset(300, 165),
-            AnchorPoint = Vector2.new(0.5, 0.5),
-            Position = UDim2.fromScale(0.5, 0.5),
-            GroupTransparency = 1,
-            Parent = s.TintFrame,
-            ThemeTag = {BackgroundColor3 = "Dialog"}
-        },
-        {
-            p("UICorner", {CornerRadius = UDim.new(0, 8)}),
-            p("UIStroke", {Transparency = 0.5, ThemeTag = {Color = "DialogBorder"}}),
-            s.Scale,
-            s.Title,
-            s.ButtonHolderFrame
-        }
-    )
-    
-    -- Add ImageLabel to CanvasGroup
-    s.ImageLabel = p(
-        "ImageLabel",
-        {
-            Size = UDim2.fromScale(1, 1),
-            Position = UDim2.fromOffset(0, 0),
-            BackgroundTransparency = 1,
-            Image = "rbxassetid://15271261798", -- Replace with your image ID
-            Parent = s.Root
-        }
-    )
-    
-    local x, y = m.SpringMotor(1, s.Root, "GroupTransparency")
-    
-    function s.Open(z)
-        e(k).DialogOpen = true
-        s.Scale.Scale = 1.1
-        u(0.75)
-        y(0)
-        w(1)
-    end
-    
-    function s.Close(z)
-        e(k).DialogOpen = false
-        u(1)
-        y(1)
-        w(1.1)
-        s.Root.UIStroke:Destroy()
-        task.wait(0.15)
-        s.TintFrame:Destroy()
-    end
-    
-    function s.Button(z, A, B)
-        s.Buttons = s.Buttons + 1
-        A = A or "Button"
-        B = B or function()
-        end
-        local C = e(k.Components.Button)("", s.ButtonHolder, true)
-        C.Title.Text = A
-        for D, E in next, s.ButtonHolder:GetChildren() do
-            if E:IsA "TextButton" then
-                E.Size = UDim2.new(1 / s.Buttons, -(((s.Buttons - 1) * 10) / s.Buttons), 0, 32)
+            s.ButtonHolderFrame =
+                p(
+                "Frame",
+                {
+                    Size = UDim2.new(1, 0, 0, 70),
+                    Position = UDim2.new(0, 0, 1, -180),
+		    BackgroundTransparency = 0.6,
+                    ThemeTag = {BackgroundColor3 = "DialogHolder"}
+                },
+                {
+                    p("Frame", {Size = UDim2.new(1, 0, 0, 1), ThemeTag = {BackgroundColor3 = "DialogHolderLine"}}),
+                    s.ButtonHolder
+                }
+            )
+            s.Title =
+                p(
+                "TextLabel",
+                {
+                    FontFace = Font.new(
+                        "rbxasset://fonts/families/GothamSSm.json",
+                        Enum.FontWeight.SemiBold,
+                        Enum.FontStyle.Normal
+                    ),
+                    Text = "Dialog",
+                    TextColor3 = Color3.fromRGB(240, 240, 240),
+                    TextSize = 22,
+                    TextXAlignment = Enum.TextXAlignment.Left,
+                    Size = UDim2.new(1, 0, 0, 22),
+                    Position = UDim2.fromOffset(20, 25),
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    BackgroundTransparency = 1,
+                    ThemeTag = {TextColor3 = "Text"}
+                }
+            )
+            s.Scale = p("UIScale", {Scale = 1})
+            local v, w = m.SpringMotor(1.1, s.Scale, "Scale")
+            s.Root =
+                p(
+                "CanvasGroup",
+                {
+                    Size = UDim2.fromOffset(300, 165),
+                    AnchorPoint = Vector2.new(0.5, 0.5),
+                    Position = UDim2.fromScale(0.5, 0.5),
+                    GroupTransparency = 1,
+                    Parent = s.TintFrame,
+                    ThemeTag = {BackgroundColor3 = "Dialog"}
+                },
+                {
+                    p("UICorner", {CornerRadius = UDim.new(0, 8)}),
+                    p("UIStroke", {Transparency = 0.5, ThemeTag = {Color = "DialogBorder"}}),
+                    s.Scale,
+                    s.Title,
+                    s.ButtonHolderFrame
+                }
+            )
+            local x, y = m.SpringMotor(1, s.Root, "GroupTransparency")
+            function s.Open(z)
+                e(k).DialogOpen = true
+                s.Scale.Scale = 1.1
+                u(0.75)
+                y(0)
+                w(1)
             end
-        end
-        m.AddSignal(
-            C.Frame.MouseButton1Click,
-            function()
-                e(k):SafeCallback(B)
-                pcall(
+            function s.Close(z)
+                e(k).DialogOpen = false
+                u(1)
+                y(1)
+                w(1.1)
+                s.Root.UIStroke:Destroy()
+                task.wait(0.15)
+                s.TintFrame:Destroy()
+            end
+            function s.Button(z, A, B)
+                s.Buttons = s.Buttons + 1
+                A = A or "Button"
+                B = B or function()
+                    end
+                local C = e(k.Components.Button)("", s.ButtonHolder, true)
+                C.Title.Text = A
+                for D, E in next, s.ButtonHolder:GetChildren() do
+                    if E:IsA "TextButton" then
+                        E.Size = UDim2.new(1 / s.Buttons, -(((s.Buttons - 1) * 10) / s.Buttons), 0, 32)
+                    end
+                end
+                m.AddSignal(
+                    C.Frame.MouseButton1Click,
                     function()
-                        s:Close()
+                        e(k):SafeCallback(B)
+                        pcall(
+                            function()
+                                s:Close()
+                            end
+                        )
                     end
                 )
+                return C
             end
-        )
-        return C
-    end
-    
-    return s
-end,
+            return s
+        end
+        return q
+    end,
+
+        
     [11] = function()
         local c, d, e, f, g = b(11)
         local h = d.Parent.Parent
