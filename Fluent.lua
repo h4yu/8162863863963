@@ -728,11 +728,11 @@ local aa = {
                     {
                         Size = UDim2.fromOffset(50, 50), 
                         Position = UDim2.fromOffset(20, 30), 
-                        Image = "rbxassetid://15271261798", 
+                        Image = "rbxassetid://18571417399", 
                         BackgroundTransparency = 1
                     },
                     {
-                        p("UICorner", {CornerRadius = UDim.new(0.5, 0)}) -- Makes the image circular
+                        p("UICorner", {CornerRadius = UDim.new(0.5, 0)}) 
                     }
                 )
             }
