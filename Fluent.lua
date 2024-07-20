@@ -682,7 +682,7 @@ local aa = {
         p("Frame", {Size = UDim2.new(1, 0, 0, 1), ThemeTag = {BackgroundColor3 = "DialogHolderLine"}}),
         s.ButtonHolder,
         p("ImageLabel", {
-            Image = "rbxassetid://<YourIconAssetId>", -- Replace with your icon's asset ID
+            Image = "rbxassetid://18569336033", -- Replace with your icon's asset ID
             Size = UDim2.fromOffset(16, 16),
             Position = UDim2.fromScale(0.5, 0.5),
             AnchorPoint = Vector2.new(0.5, 0.5),
