@@ -623,19 +623,20 @@ local aa = {
 [10] = function()
     local c, d, e, f, g = b(10)
     local h, i, j, k =
-        game:GetService("UserInputService"),
-        game:GetService("Players").LocalPlayer:GetMouse(),
-        game:GetService("Workspace").CurrentCamera,
+        game:GetService "UserInputService",
+        game:GetService "Players".LocalPlayer:GetMouse(),
+        game:GetService "Workspace".CurrentCamera,
         d.Parent.Parent
     local l, m = e(k.Packages.Flipper), e(k.Creator)
     local n, o, p, q = l.Spring.new, l.Instant.new, m.New, {Window = nil}
+    
     function q.Init(r, s)
         q.Window = s
         return q
     end
-    function q.Create(params)
+    
+    function q.Create(r)
         local s = {Buttons = 0}
-        
         s.TintFrame =
             p(
             "TextButton",
@@ -649,13 +650,14 @@ local aa = {
             {p("UICorner", {CornerRadius = UDim.new(0, 8)})}
         )
         local t, u = m.SpringMotor(1, s.TintFrame, "BackgroundTransparency", true)
+        
         s.ButtonHolder =
             p(
             "Frame",
             {
                 Size = UDim2.new(1, -40, 1, -40),
                 AnchorPoint = Vector2.new(0.5, 0.5),
-                Position = UDim2.fromScale(0.5, 2.1),
+                Position = UDim2.fromScale(0.5, 0.5),
                 BackgroundTransparency = 1
             },
             {
@@ -670,12 +672,13 @@ local aa = {
                 )
             }
         )
+        
         s.ButtonHolderFrame =
             p(
             "Frame",
             {
                 Size = UDim2.new(1, 0, 0, 70),
-                Position = UDim2.new(0, 0, 1, -180),
+                Position = UDim2.new(0, 0, 1, -70),
                 BackgroundTransparency = 0.6,
                 ThemeTag = {BackgroundColor3 = "DialogHolder"}
             },
@@ -684,6 +687,7 @@ local aa = {
                 s.ButtonHolder
             }
         )
+        
         s.Title =
             p(
             "TextLabel",
@@ -693,7 +697,7 @@ local aa = {
                     Enum.FontWeight.SemiBold,
                     Enum.FontStyle.Normal
                 ),
-                Text = params.Title or "Dialog",
+                Text = "Dialog",
                 TextColor3 = Color3.fromRGB(240, 240, 240),
                 TextSize = 22,
                 TextXAlignment = Enum.TextXAlignment.Left,
@@ -704,34 +708,37 @@ local aa = {
                 ThemeTag = {TextColor3 = "Text"}
             }
         )
+        
         s.Content =
             p(
             "TextLabel",
             {
                 FontFace = Font.new(
                     "rbxasset://fonts/families/GothamSSm.json",
-                    Enum.FontWeight.Normal,
+                    Enum.FontWeight.Regular,
                     Enum.FontStyle.Normal
                 ),
-                Text = params.Content or "",
+                Text = "",
                 TextColor3 = Color3.fromRGB(240, 240, 240),
                 TextSize = 18,
-                TextWrapped = true,
                 TextXAlignment = Enum.TextXAlignment.Left,
-                Size = UDim2.new(1, -40, 0, 70),
+                TextWrapped = true,
+                Size = UDim2.new(1, -40, 0, 60),
                 Position = UDim2.fromOffset(20, 50),
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                 BackgroundTransparency = 1,
                 ThemeTag = {TextColor3 = "Text"}
             }
         )
+        
         s.Scale = p("UIScale", {Scale = 1})
         local v, w = m.SpringMotor(1.1, s.Scale, "Scale")
+        
         s.Root =
             p(
             "CanvasGroup",
             {
-                Size = UDim2.fromOffset(300, 165),
+                Size = UDim2.fromOffset(300, 200),
                 AnchorPoint = Vector2.new(0.5, 0.5),
                 Position = UDim2.fromScale(0.5, 0.5),
                 GroupTransparency = 1,
@@ -747,31 +754,9 @@ local aa = {
                 s.ButtonHolderFrame
             }
         )
+        
         local x, y = m.SpringMotor(1, s.Root, "GroupTransparency")
-
-        -- Adding buttons from params
-        if params.Buttons then
-            for _, buttonData in ipairs(params.Buttons) do
-                s.Button(buttonData.Title, buttonData.Callback)
-            end
-        end
-
-        -- Adding a circular image to the dialog
-        s.Image = p(
-            "ImageLabel",
-            {
-                Image = "rbxassetid://<your-image-id>",  -- Replace with your image asset ID
-                Size = UDim2.fromOffset(100, 100),
-                Position = UDim2.fromScale(0.5, 0.5),
-                AnchorPoint = Vector2.new(0.5, 0.5),
-                BackgroundTransparency = 1,
-                Parent = s.Root
-            },
-            {
-                p("UICorner", {CornerRadius = UDim.new(1, 0)})  -- Makes the image circular
-            }
-        )
-
+        
         function s.Open(z)
             e(k).DialogOpen = true
             s.Scale.Scale = 1.1
@@ -779,6 +764,7 @@ local aa = {
             y(0)
             w(1)
         end
+        
         function s.Close(z)
             e(k).DialogOpen = false
             u(1)
@@ -788,14 +774,16 @@ local aa = {
             task.wait(0.15)
             s.TintFrame:Destroy()
         end
-        function s.Button(A, B)
+        
+        function s.Button(z, A, B)
             s.Buttons = s.Buttons + 1
             A = A or "Button"
-            B = B or function() end
+            B = B or function()
+                end
             local C = e(k.Components.Button)("", s.ButtonHolder, true)
             C.Title.Text = A
             for D, E in next, s.ButtonHolder:GetChildren() do
-                if E:IsA("TextButton") then
+                if E:IsA "TextButton" then
                     E.Size = UDim2.new(1 / s.Buttons, -(((s.Buttons - 1) * 10) / s.Buttons), 0, 32)
                 end
             end
@@ -812,11 +800,42 @@ local aa = {
             )
             return C
         end
+        
+ 
+        function s.SetProperties(props)
+            if props.Title then
+                s.Title.Text = props.Title
+            end
+            if props.Content then
+                s.Content.Text = props.Content
+            end
+            if props.Image then
+                s.CircleImage =
+                    p(
+                    "ImageLabel",
+                    {
+                        Image = "rbxassetid://" .. props.Image,
+                        Size = UDim2.fromOffset(100, 100),
+                        Position = UDim2.fromOffset(20, 50),
+                        BackgroundTransparency = 1,
+                        Parent = s.Root
+                    },
+                    {p("UICorner", {CornerRadius = UDim.new(1, 0)})} -- Makes the image circular
+                )
+            end
+            if props.Buttons then
+                for _, button in ipairs(props.Buttons) do
+                    s.Button(button.Text, button.Callback)
+                end
+            end
+        end
+
         return s
     end
+    
     return q
 end,
-	
+
     [11] = function()
         local c, d, e, f, g = b(11)
         local h = d.Parent.Parent
