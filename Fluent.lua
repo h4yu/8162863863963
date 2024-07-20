@@ -648,18 +648,17 @@ local aa = {
                 {p("UICorner", {CornerRadius = UDim.new(0, 8)})}
             )
             local t, u = m.SpringMotor(1, s.TintFrame, "BackgroundTransparency", true)
-	s.ImageLabel =
-    p(
+	   s.ImageLabel = p(
     "ImageLabel",
     {
-        Image = "rbxassetid://1234567890",
-        Size = UDim2.new(0.5, 0, 0.5, 0),  -- Adjust size as needed
+        Image = "rbxassetid://1234567890",  -- Replace with your actual image asset ID
+        Size = UDim2.new(0.5, 0, 0.5, 0),  -- Adjust size if necessary
         Position = UDim2.fromScale(0.5, 0.5),  -- Centered position
-        AnchorPoint = Vector2.new(0.5, 0.5),  -- Center the position
-        BackgroundTransparency = 1
+        AnchorPoint = Vector2.new(0.5, 0.5),  -- Anchor the position to the center
+        BackgroundTransparency = 0.5  -- Fully transparent background
     },
     {
-        p("UICorner", {CornerRadius = UDim.new(0.5, 0)})  -- Circular effect
+        p("UICorner", {CornerRadius = UDim.new(0.5, 0)})  -- Circular corners
     }
 			)
             s.ButtonHolder =
@@ -784,7 +783,7 @@ local aa = {
             return s
         end
         return q
-    end,
+    end
     [11] = function()
         local c, d, e, f, g = b(11)
         local h = d.Parent.Parent
