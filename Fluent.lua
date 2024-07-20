@@ -1651,7 +1651,7 @@ local aa = {
                 function()
                     p.Window:Dialog {
                         Title = "wuynn",
-                        Content = "",
+                        Content = "Ngay Nao Cung Buon.",
                         Buttons = {{Title = "Ok", Callback = function() print("") end}}}
                 end)
             return o
