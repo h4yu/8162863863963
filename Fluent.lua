@@ -1636,6 +1636,22 @@ local aa = {
                     p.Window:Minimize()
                 end
             )
+	    o.MinButton =
+                q(
+                i.Discord,
+                UDim2.new(1, -110, 0, 4),
+                o.Frame,
+                function()
+                p.Window:Dialog {
+                        Title = "H4yu",
+                        Content = "Are you sure you want to close the hub ??🥺🥺",
+                        Buttons = {{Title = "Ofc", Callback = function()
+                                    p:Destroy()
+                                end}, {Title = "Noo"}}
+                    }
+                end
+            end
+	    )
             return o
         end
     end,
