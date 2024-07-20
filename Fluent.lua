@@ -1623,9 +1623,9 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Dialog {
-                        Title = "Discord",
-                        Content = "Still",
-                        Buttons = {{Title = "Ofc", Callback = function() p:Destroy() end}, {Title = "Noo"}}}
+                        Title = "Close Hub ",
+                        Content = "",
+                        Buttons = {{Title = "Yes !", Callback = function() p:Destroy() end}, {Title = "No !"}}}
                 end)
             o.MaxButton =
                 q(
