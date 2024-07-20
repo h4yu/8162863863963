@@ -25,7 +25,7 @@ ImageButton.MouseButton1Down:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
 end)
 UICorner.Parent = ImageButton
-local Id = "1"
+
 local a, b = {
     {
         1,
@@ -674,7 +674,7 @@ local aa = {
                 "Frame",
                 {
                     Size = UDim2.new(1, 0, 0, 70),
-                    Position = UDim2.new(0, 0, 1, -70),
+                    Position = UDim2.new(0, 0, 1, -180),
 		    BackgroundTransparency = 0.6,
                     ThemeTag = {BackgroundColor3 = "DialogHolder"}
                 },
