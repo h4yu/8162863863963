@@ -654,7 +654,7 @@ local aa = {
                 {
                     Size = UDim2.new(1, -40, 1, -40),
                     AnchorPoint = Vector2.new(0.5, 0.5),
-                    Position = UDim2.fromScale(0.5, 0.5),
+                    Position = UDim2.fromScale(0.5, 2.1),
                     BackgroundTransparency = 1
                 },
                 {
@@ -674,7 +674,7 @@ local aa = {
                 "Frame",
                 {
                     Size = UDim2.new(1, 0, 0, 70),
-                    Position = UDim2.new(0, 0, 1, -170),
+                    Position = UDim2.new(0, 0, 1, -180),
 		    BackgroundTransparency = 0.6,
                     ThemeTag = {BackgroundColor3 = "DialogHolder"}
                 },
