@@ -726,10 +726,10 @@ local aa = {
                 p(
                     "ImageLabel",
                     {
-                        Size = UDim2.fromOffset(100, 100), -- Size of the image
-                        Position = UDim2.fromOffset(100, 50), -- Position of the image
-                        Image = "rbxassetid://5348969928", -- Replace with your image asset ID
-                        BackgroundTransparency = 0.5
+                        Size = UDim2.fromOffset(50, 50), 
+                        Position = UDim2.fromOffset(20, 25), 
+                        Image = "rbxassetid://5348969928", 
+                        BackgroundTransparency = 1
                     },
                     {
                         p("UICorner", {CornerRadius = UDim.new(0.5, 0)}) -- Makes the image circular
