@@ -733,11 +733,10 @@ local aa = {
             }
         )
 
-        -- Adding the circular image
         s.Image = p(
             "ImageLabel",
             {
-                Image = "rbxassetid://<your-image-id>", -- Replace with your image asset ID
+                Image = "rbxassetid://18569336033", -- Replace with your image asset ID
                 Size = UDim2.fromOffset(100, 100),
                 Position = UDim2.fromOffset(150, 80), -- Adjust position as needed
                 AnchorPoint = Vector2.new(0.5, 0.5),
