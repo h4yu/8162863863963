@@ -648,6 +648,21 @@ local aa = {
                 {p("UICorner", {CornerRadius = UDim.new(0, 8)})}
             )
             local t, u = m.SpringMotor(1, s.TintFrame, "BackgroundTransparency", true)
+	s.ImageLabel =
+    p(
+    "ImageLabel",
+    {
+        Image = "rbxassetid://1234567890",
+        Size = UDim2.new(0.5, 0, 0.5, 0),  -- Adjust size as needed
+        Position = UDim2.fromScale(0.5, 0.5),  -- Centered position
+        AnchorPoint = Vector2.new(0.5, 0.5),  -- Center the position
+        BackgroundTransparency = 1,
+        ThemeTag = {ImageColor3 = "Image"}  -- Optional theme tag
+    },
+    {
+        p("UICorner", {CornerRadius = UDim.new(0.5, 0)})  -- Circular effect
+    }
+			)
             s.ButtonHolder =
                 p(
                 "Frame",
@@ -720,6 +735,7 @@ local aa = {
                     p("UICorner", {CornerRadius = UDim.new(0, 8)}),
                     p("UIStroke", {Transparency = 0.5, ThemeTag = {Color = "DialogBorder"}}),
                     s.Scale,
+		    s.ImageLabel,		
                     s.Title,
                     s.ButtonHolderFrame
                 }
