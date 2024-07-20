@@ -697,7 +697,7 @@ local aa = {
                     TextSize = 22,
                     TextXAlignment = Enum.TextXAlignment.Left,
                     Size = UDim2.new(1, 0, 0, 22),
-                    Position = UDim2.fromOffset(20, 25),
+                    Position = UDim2.fromOffset(78, 55),
                     BackgroundColor3 = Color3.fromRGB(255, 255, 255),
                     BackgroundTransparency = 1,
                     ThemeTag = {TextColor3 = "Text"}
@@ -727,8 +727,8 @@ local aa = {
                     "ImageLabel",
                     {
                         Size = UDim2.fromOffset(50, 50), 
-                        Position = UDim2.fromOffset(20, 25), 
-                        Image = "rbxassetid://5348969928", 
+                        Position = UDim2.fromOffset(20, 30), 
+                        Image = "rbxassetid://15271261798", 
                         BackgroundTransparency = 1
                     },
                     {
@@ -1650,8 +1650,8 @@ local aa = {
                 o.Frame,
                 function()
                     p.Window:Dialog {
-                        Title = "Discord",
-                        Content = "Still",
+                        Title = "wuynn",
+                        Content = "",
                         Buttons = {{Title = "Ok", Callback = function() print("") end}}}
                 end)
             return o
