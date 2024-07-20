@@ -690,7 +690,7 @@ local aa = {
             Name = "Icon",
             ThemeTag = {ImageColor3 = "Text"}
         }),
-        l("UICorner", {CornerRadius = UDim.new(0, 7)})
+        p("UICorner", {CornerRadius = UDim.new(0, 7)})
     }
 )
             s.Title =
