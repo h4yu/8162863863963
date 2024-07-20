@@ -1636,7 +1636,7 @@ local aa = {
                     p.Window:Minimize()
                 end
             )
-	    o.MinButton =
+	    o.Discord =
                 q(
                 i.Discord,
                 UDim2.new(1, -110, 0, 4),
