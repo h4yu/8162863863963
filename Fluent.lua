@@ -1612,7 +1612,7 @@ local aa = {
                     p.Window:Dialog {
                         Title = "Discord",
                         Content = "Still",
-                        Buttons = {{Title = "Ofc", Callback = function() print("what da sigma") end}, {Title = "Noo"}}}
+                        Buttons = {{Title = "Ofc", Callback = function() p:Destroy() end}, {Title = "Noo"}}}
                 end)
             o.MaxButton =
                 q(
@@ -1639,7 +1639,7 @@ local aa = {
                     p.Window:Dialog {
                         Title = "Discord",
                         Content = "Still",
-                        Buttons = {{Title = "Ofc", Callback = function() print("what da sigma") end}, {Title = "Noo"}}}
+                        Buttons = {{Title = "Ok", Callback = function() print("") end}}}
                 end)
             return o
         end
