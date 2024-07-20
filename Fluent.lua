@@ -706,24 +706,37 @@ local aa = {
             s.Scale = p("UIScale", {Scale = 1})
             local v, w = m.SpringMotor(1.1, s.Scale, "Scale")
             s.Root =
+            p(
+            "CanvasGroup",
+            {
+                Size = UDim2.fromOffset(300, 165),
+                AnchorPoint = Vector2.new(0.5, 0.5),
+                Position = UDim2.fromScale(0.5, 0.5),
+                GroupTransparency = 1,
+                Parent = s.TintFrame,
+                ThemeTag = {BackgroundColor3 = "Dialog"}
+            },
+            {
+                p("UICorner", {CornerRadius = UDim.new(0, 8)}),
+                p("UIStroke", {Transparency = 0.5, ThemeTag = {Color = "DialogBorder"}}),
+                s.Scale,
+                s.Title,
+                s.ButtonHolderFrame,
+
                 p(
-                "CanvasGroup",
-                {
-                    Size = UDim2.fromOffset(300, 165),
-                    AnchorPoint = Vector2.new(0.5, 0.5),
-                    Position = UDim2.fromScale(0.5, 0.5),
-                    GroupTransparency = 1,
-                    Parent = s.TintFrame,
-                    ThemeTag = {BackgroundColor3 = "Dialog"}
-                },
-                {
-                    p("UICorner", {CornerRadius = UDim.new(0, 8)}),
-                    p("UIStroke", {Transparency = 0.5, ThemeTag = {Color = "DialogBorder"}}),
-                    s.Scale,
-                    s.Title,
-                    s.ButtonHolderFrame
-                }
-            )
+                    "ImageLabel",
+                    {
+                        Size = UDim2.fromOffset(100, 100), -- Size of the image
+                        Position = UDim2.fromOffset(100, 50), -- Position of the image
+                        Image = "rbxassetid://5348969928", -- Replace with your image asset ID
+                        BackgroundTransparency = 0.5
+                    },
+                    {
+                        p("UICorner", {CornerRadius = UDim.new(0.5, 0)}) -- Makes the image circular
+                    }
+                )
+            }
+        )
             local x, y = m.SpringMotor(1, s.Root, "GroupTransparency")
             function s.Open(z)
                 e(k).DialogOpen = true
