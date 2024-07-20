@@ -657,7 +657,6 @@ local aa = {
         Position = UDim2.fromScale(0.5, 0.5),  -- Centered position
         AnchorPoint = Vector2.new(0.5, 0.5),  -- Center the position
         BackgroundTransparency = 1,
-        ThemeTag = {ImageColor3 = "Image"}  -- Optional theme tag
     },
     {
         p("UICorner", {CornerRadius = UDim.new(0.5, 0)})  -- Circular effect
