@@ -472,7 +472,7 @@ function redzlib:MakeWindow(Configs)
     Size = UDim2.fromOffset(UISizeX, UISizeY),
     Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
     BackgroundTransparency = 1,
-    Image = "rbxassetid://131482887303437",
+    Image = "rbxassetid://87338835273192",
     Name = "Hub"
   }), "Main")Make("Gradient", MainFrame, {
     Rotation = 45
