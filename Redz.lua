@@ -474,7 +474,7 @@ function redzlib:MakeWindow(Configs)
     BackgroundTransparency = 1,
     Image = "rbxassetid://87338835273192",
     Name = "Hub"
-  }), "Main")Make("", MainFrame, {
+  }), "Main")Make("Gradient", MainFrame, {
     Rotation = 45
   })MakeDrag(MainFrame)
   
