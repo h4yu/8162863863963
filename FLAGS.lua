@@ -1,22 +1,4 @@
--- Services
-local Players = game:GetService("Players")
-local LocalizationService = game:GetService("LocalizationService")
 
--- Fetch player's country code
-local player = Players.LocalPlayer
-local success, countryCode = pcall(function()
-    return LocalizationService:GetCountryRegionForPlayerAsync(player)
-end)
-
-if not success then
-    warn("Failed to get country code: " .. tostring(countryCode))
-    return
-end
-
--- Print the player's country code
-print("Player's country code: " .. countryCode)
-
--- Country flags table
 local countryFlags = {
     AF = "🇦🇫", AL = "🇦🇱", DZ = "🇩🇿", AS = "🇦🇸", AD = "🇦🇩",
     AO = "🇦🇴", AI = "🇦🇮", AQ = "🇦🇶", AG = "🇦🇬", AR = "🇦🇷",
@@ -64,7 +46,8 @@ local countryFlags = {
     US = "🇺🇸", UY = "🇺🇾", UZ = "🇺🇿", VU = "🇻🇺", VE = "🇻🇪",
     VN = "🇻🇳", WF = "🇼🇫", EH = "🇪🇭", YE = "🇾🇪", ZM = "🇿🇲",
     ZW = "🇿🇼"
-}
+}    
 
-local playerFlag = countryFlags[countryCode] or "🏳️‍🌈" -- Fallback to a default flag (e.g., rainbow flag)
+
+
     
